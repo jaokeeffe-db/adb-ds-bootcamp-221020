@@ -195,7 +195,7 @@ fs = feature_store.FeatureStoreClient()
 # This cell uses an API introduced with Databricks Runtime 10.2 ML.
 # If your cluster is running Databricks Runtime 10.1 ML or below, skip or comment out this cell and uncomment and run Cmd 22.
 
-spark.conf.set("spark.sql.shuffle.partitions", "5")
+spark.conf.set("spark.sql.shuffle.partitions", "8")
 
 fs.create_table(
     name=f"{fs_db_name}.trip_pickup_features",
