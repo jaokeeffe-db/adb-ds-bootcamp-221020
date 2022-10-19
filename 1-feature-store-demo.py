@@ -194,7 +194,7 @@ fs = feature_store.FeatureStoreClient()
 
 # This cell uses an API introduced with Databricks Runtime 10.2 ML.
 # If your cluster is running Databricks Runtime 10.1 ML or below, skip or comment out this cell and uncomment and run Cmd 22.
-'''
+
 spark.conf.set("spark.sql.shuffle.partitions", "5")
 
 fs.create_table(
@@ -211,12 +211,12 @@ fs.create_table(
     partition_columns="yyyy_mm",
     description="Taxi Fares. Dropoff Features",
 )
-'''
+
 
 # COMMAND ----------
 
 # To run this notebook with Databricks Runtime 10.1 ML or below, uncomment this cell.
-
+'''
 spark.conf.set("spark.sql.shuffle.partitions", "5")
 
 fs.create_feature_table(
@@ -234,6 +234,7 @@ fs.create_feature_table(
     partition_columns="yyyy_mm",
     description="Taxi Fares. Dropoff Features",
 )
+'''
 
 # COMMAND ----------
 
