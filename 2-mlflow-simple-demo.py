@@ -36,7 +36,7 @@ mlflow.__version__
 
 # COMMAND ----------
 
-#%sh wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+%sh wget -P /dbfs https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 # COMMAND ----------
 
@@ -44,7 +44,7 @@ mlflow.__version__
 
 # COMMAND ----------
 
-wine_data_path = "/dbfs/FileStore/tables/winequality_red.csv"
+wine_data_path = "/dbfs/winequality-red.csv"
 
 # COMMAND ----------
 
